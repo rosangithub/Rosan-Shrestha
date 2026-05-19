@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Rosan Shrestha — Cybersecurity Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ░░ PRELOADER ░░ -->
+  <div id="preloader">
+    <div class="pre-inner">
+      <div class="pre-bars">
+        <div class="pre-hex"></div>
+        <div class="pre-hex"></div>
+        <div class="pre-hex"></div>
+        <div class="pre-hex"></div>
+        <div class="pre-hex"></div>
+      </div>
+      <span class="pre-label">INITIALIZING<span class="blink">_</span></span>
+    </div>
+  </div>
+
+  <!-- ░░ CUSTOM CURSOR ░░ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ░░ CANVAS BACKGROUND ░░ -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- ░░ NAVBAR ░░ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">[</span>ROSAN<span class="logo-accent">_SHRESTHA</span><span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certs</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ░░ HERO ░░ -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-badge"><i class="fas fa-shield-halved"></i> Available for Work</div>
+        <h1 class="hero-name">Rosan <span class="accent">Shrestha</span></h1>
+        <div class="typing-wrapper">
+          <span class="typing-prefix">&gt; </span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-bio">Passionate cybersecurity student specializing in ethical hacking, penetration testing, and building secure digital infrastructures. I bridge the gap between offense and defense in the cyber realm.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary"><i class="fas fa-bolt"></i> Hire Me</a>
+          <a href="#" class="btn btn-outline" id="downloadCV"><i class="fas fa-file-arrow-down"></i> Download CV</a>
+          <a href="#contact" class="btn btn-ghost"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/rosangithub" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/rosanshrestha" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/rosanshrestha89/" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/rosan.shrestha.77920" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="profile-frame">
+          <div class="profile-hexagon">
+            <div class="hex-border"></div>
+            <img src="image/rosan.JPG" alt="Rosan Shrestha" class="profile-img" />
+          </div>
+          <div class="floating-badge fb1"><i class="fas fa-lock"></i> Secure</div>
+          <div class="floating-badge fb2"><i class="fas fa-code"></i> Dev</div>
+          <div class="floating-badge fb3"><i class="fas fa-bug"></i> Ethical</div>
+          <div class="scan-line"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ░░ ABOUT ░░ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <!-- <span class="section-tag">01 // ABOUT</span> -->
+        <h2 class="section-title">Who <span class="accent">Am I?</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="about-intro">I'm a <strong>Cybersecurity Student</strong> at the forefront of digital defense, with a burning passion for understanding how systems fail — so I can make them stronger.</p>
+          <p>My journey began with curiosity about how networks communicate, which quickly evolved into a deep dive into ethical hacking, vulnerability research, and secure software development. I believe true security comes from thinking like an attacker.</p>
+          <div class="about-details">
+            <div class="detail-item"><span class="detail-label">Degree</span><span>Bachelor of Engineering in Information Technology</span></div>
+            <div class="detail-item"><span class="detail-label">University</span><span>Pokhara University, 2021–2026</span></div>
+            <div class="detail-item"><span class="detail-label">Location</span><span>Kathmandu, Nepal</span></div>
+            <div class="detail-item"><span class="detail-label">Status</span><span class="status-badge">Open to Opportunities</span></div>
+          </div>
+          <div class="interests">
+            <span class="interest-tag"><i class="fas fa-crosshairs"></i> Ethical Hacking</span>
+            <span class="interest-tag"><i class="fas fa-shield"></i> Cyber Security</span>
+            <span class="interest-tag"><i class="fab fa-user-secret"></i> SOC and SEIM</span>
+            <span class="interest-tag"><i class="fas fa-network-wired"></i> Networking</span>
+            <span class="interest-tag"><i class="fas fa-globe"></i> Web Security</span>
+          </div>
+        </div>
+        <div class="about-stats reveal">
+          <div class="stat-card">
+            <div class="stat-num" data-count="3">0</div>
+            <div class="stat-label">Projects<br>Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-count="3">0</div>
+            <div class="stat-label">Certifications<br>Earned</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-count="10">0</div>
+            <div class="stat-label">Skills<br>on tool</div>
+          </div>
+         <div class="stat-card">
+          <div class="stat-number"> 2026</div>
+           <div class="stat-label">Graduate<br>BEIT</div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ SKILLS ░░ -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header">
+        <!-- <span class="section-tag">02 // SKILLS</span> -->
+        <h2 class="section-title">Technical <span class="accent">Arsenal</span></h2>
+        <p class="section-sub">Technologies and tools I work with, grouped by domain and proficiency level.</p>
+      </div>
+
+      <!-- Skill Cards Grid -->
+      <div class="skill-cards-grid">
+
+        <!-- Development -->
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="fas fa-code"></i></div>
+            <div>
+              <h3>Development</h3>
+              <span>Web & Backend</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="stag stag-expert"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="stag stag-expert"><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span class="stag stag-advanced"><i class="fab fa-python"></i> Python</span>
+            <span class="stag stag-intermediate"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="stag stag-intermediate"><i class="fas fa-layer-group"></i> Django</span>
+            <span class="stag stag-intermediate"><i class="fas fa-database"></i> SQL</span>
+          </div>
+          <div class="skill-levels-legend">
+            <span class="legend-dot dot-expert"></span><span>Expert</span>
+            <span class="legend-dot dot-advanced"></span><span>Advanced</span>
+            <span class="legend-dot dot-intermediate"></span><span>Intermediate</span>
+          </div>
+        </div>
+
+        <!-- Security -->
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-card-icon sk-red"><i class="fas fa-shield-halved"></i></div>
+            <div>
+              <h3>Cyber Security</h3>
+              <span>Offense & Defense</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="stag stag-advanced"><i class="fas fa-crosshairs"></i> Ethical Hacking</span>
+            <span class="stag stag-advanced"><i class="fas fa-bug"></i> Vulnerability Assessment And Penetration Testing</span>
+            <span class="stag stag-advanced"><i class="fas fa-shield"></i> SOC and SIEM</span>
+            <span class="stag stag-intermediate"><i class="fas fa-network-wired"></i> Computer Network and  Security</span>
+            <span class="stag stag-intermediate"><i class="fas fa-lock"></i> Web Security</span>
+            <span class="stag stag-intermediate"><i class="fas fa-search"></i> OSINT And Reconnaissance</span>
+          </div>
+          <div class="skill-levels-legend">
+            <span class="legend-dot dot-advanced"></span><span>Advanced</span>
+            <span class="legend-dot dot-intermediate"></span><span>Intermediate</span>
+          </div>
+        </div>
+
+        <!-- Tools & OS -->
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-card-icon sk-green"><i class="fas fa-terminal"></i></div>
+            <div>
+              <h3>Tools & OS</h3>
+              <span>Security Toolkit</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="stag stag-expert"><i class="fab fa-linux"></i> Kali Linux and Ubuntu</span>
+            <span class="stag stag-advanced"><i class="fas fa-satellite-dish"></i> Wireshark</span>
+            <span class="stag stag-advanced"><i class="fas fa-radar"></i> Nmap</span>
+            <span class="stag stag-intermediate"><i class="fas fa-spider"></i> Burp Suite</span>
+            <span class="stag stag-expert"><i class="fab fa-git-alt"></i> Git & GitHub</span>
+            <span class="stag stag-intermediate"><i class="fab fa-openvas"></i> Openvas</span>
+            <span class="stag stag-intermediate"><i class="fas fa-bolt"></i> Metasploit Framework</span>
+            <span class="stag stag-intermediate"><i class="fas fa-eye"></i> John the Ripper & hashcat</span>
+            <span class="stag stag-intermediate"><i class="fas fa-virus"></i> Nessus</span>
+            <span class="stag stag-intermediate"><i class="fas fa-shield-alt"></i> Wazuh</span>
+            <span class="stag stag-intermediate"><i class="fas fa-search"></i> Splunk</span>
+
+          </div>
+          <div class="skill-levels-legend">
+            <span class="legend-dot dot-expert"></span><span>Expert</span>
+            <span class="legend-dot dot-advanced"></span><span>Advanced</span>
+            <span class="legend-dot dot-intermediate"></span><span>Intermediate</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tools Showcase — Icon Grid -->
+<div class="tools-section reveal">
+  <h3 class="tools-title"><i class="fas fa-wrench"></i> Tools I Use Daily</h3>
+
+  <div class="tools-grid">
+
+    <div class="tool-card">
+      <div class="tool-card-icon"><i class="fab fa-linux"></i></div>
+      <span class="tool-name">Kali Linux</span>
+      <span class="tool-desc">Primary OS</span>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-card-icon"><i class="fas fa-shield-halved"></i></div>
+      <span class="tool-name">Wazuh</span>
+      <span class="tool-desc">Security Information & Event Management</span>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-card-icon tc-orange"><i class="fas fa-network-wired"></i></div>
+      <span class="tool-name">Wireshark</span>
+      <span class="tool-desc">Packet Analysis</span>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-card-icon tc-red"><i class="fas fa-spider"></i></div>
+      <span class="tool-name">Burp Suite</span>
+      <span class="tool-desc">Web App Security Testing</span>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-card-icon tc-green"><i class="fas fa-satellite-dish"></i></div>
+      <span class="tool-name">Nmap</span>
+      <span class="tool-desc">Network Scanning</span>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-card-icon"><i class="fab fa-github"></i></div>
+      <span class="tool-name">GitHub</span>
+      <span class="tool-desc">Version Control</span>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-card-icon tc-blue"><i class="fas fa-shield-virus"></i></div>
+      <span class="tool-name">OpenVAS</span>
+      <span class="tool-desc">Vulnerability Scanning</span>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-card-icon tc-blue"><i class="fas fa-bug"></i></div>
+      <span class="tool-name">Nessus</span>
+      <span class="tool-desc">Vulnerability Scanning</span>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-card-icon tc-yellow"><i class="fas fa-bolt"></i></div>
+      <span class="tool-name">Metasploit</span>
+      <span class="tool-desc">Exploitation Framework</span>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-card-icon tc-teal"><i class="fas fa-key"></i></div>
+      <span class="tool-name">John the Ripper</span>
+      <span class="tool-desc">Password Cracking</span>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-card-icon tc-teal"><i class="fas fa-unlock"></i></div>
+      <span class="tool-name">Hashcat</span>
+      <span class="tool-desc">Password Cracking</span>
+    </div>
+
+  </div>
+</div>
+  <!-- ░░ PROJECTS ░░ -->
+  <!-- ░░ PROJECTS ░░ -->
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <div class="section-header">
+      <!-- <span class="section-tag">03 // PROJECTS</span> -->
+      <h2 class="section-title">Featured <span class="accent">Work</span></h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card reveal" data-category="security">
+        <div class="project-thumb">
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=300&fit=crop"
+               alt="IDS Project"
+               loading="lazy" />
+
+          <div class="project-overlay">
+            <a href="https://github.com/rosangithub/ANIDS-model-two-stage-"
+               class="proj-btn proj-btn-gh"
+               target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <div class="project-tags">
+            <span>Python</span>
+            <span>ML</span>
+            <span>Security</span>
+            <span>Scapy</span>
+          </div>
+
+          <h3>Anomaly Based Network Intrusion Detection System</h3>
+
+          <p>
+            ML-powered IDS that analyzes network traffic patterns using
+            Random Forest algorithms to detect and classify cyber threats
+            in real-time with high accuracy.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card reveal" data-category="security">
+        <div class="project-thumb">
+          <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=600&h=300&fit=crop"
+               alt="DDoS Classification"
+               loading="lazy" />
+
+          <div class="project-overlay">
+            <a href="https://github.com/rosangithub/DDos-Clasification"
+               class="proj-btn proj-btn-gh"
+               target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <div class="project-tags">
+            <span>Python</span>
+            <span>Machine Learning</span>
+            <span>DDoS</span>
+          </div>
+
+          <h3>DDoS Attack Classification System</h3>
+
+          <p>
+            A machine learning-based security model designed to classify
+            and detect DDoS attacks in real-time network traffic.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card reveal" data-category="security">
+        <div class="project-thumb">
+          <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=600&h=300&fit=crop"
+               alt="Malware Finder"
+               loading="lazy" />
+
+          <div class="project-overlay">
+            <a href="https://github.com/rosangithub/Malware_Finder"
+               class="proj-btn proj-btn-gh"
+               target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <div class="project-tags">
+            <span>Python</span>
+            <span>Malware</span>
+            <span>Security</span>
+          </div>
+
+          <h3>Malware Finder</h3>
+
+          <p>
+            A cybersecurity tool developed to identify, analyze,
+            and detect malware behavior in computer systems.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card reveal" data-category="web">
+        <div class="project-thumb">
+          <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=600&h=300&fit=crop"
+               alt="Social Media Web App"
+               loading="lazy" />
+
+          <div class="project-overlay">
+            <a href="https://github.com/rosangithub/SMA"
+               class="proj-btn proj-btn-gh"
+               target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <div class="project-tags">
+            <span>Django</span>
+            <span>Python</span>
+            <span>HTMX</span>
+            <span>Security</span>
+          </div>
+
+          <h3>Social Media Web App — LinkUp</h3>
+
+          <p>
+            A modern social media web application built using Django,
+            HTMX, Alpine.js, and Python with authentication,
+            secure messaging, and robust security features.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card reveal" data-category="security">
+        <div class="project-thumb">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=300&fit=crop"
+               alt="Network Security Assessment"
+               loading="lazy" />
+
+          <div class="project-overlay">
+            <a href="#"
+               class="proj-btn">
+            </a>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <div class="project-tags">
+            <span>Kali Linux</span>
+            <span>Nmap</span>
+            <span>Metasploit</span>
+            <span>OSINT</span>
+          </div>
+
+          <h3>End-to-End Network Security Assessment</h3>
+
+          <p>
+            Performed comprehensive VAPT activities including OSINT,
+            footprinting, subdomain hunting, network scanning,
+            privilege escalation, password cracking, and vulnerability analysis.
+          </p>
+
+          <p>
+            Generated detailed VAPT reports with risk analysis,
+            CVSS scoring, and remediation recommendations.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ░░ CERTIFICATIONS ░░ -->
+  <section id="certifications" class="section certs-section">
+    <div class="container">
+      <div class="section-header">
+        <!-- <span class="section-tag">04 // CERTIFICATIONS</span> -->
+        <h2 class="section-title"><span class="accent">Training</span> and  <span class="accent">Certifications</span></h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+          <div class="cert-body">
+            <span class="cert-issuer">Mindrisers Institute Technology</span>
+        <h3>Cyber Security Training</h3>
+            <p>Vulnerability  Assessment and penetration testing and ethical hacking methodologies and digital forensics,malware analysis,SOC and SEIM.</p>
+            <span class="cert-year">2025</span>
+          </div>
+          <!-- <div class="cert-badge">CEH</div> -->
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+          <div class="cert-body">
+            <span class="cert-issuer">Security Blue Team</span>
+            <h3>Introduction to OSINT</h3>
+            <p>Introduction to Open-Source Intelligence (OSINT) techniques and tools for cyber security professionals.</p>
+            <span class="cert-year">2025</span>
+          </div>
+          <!-- <div class="cert-badge"></div> -->
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fab fa-python"></i></div>
+          <div class="cert-body">
+            <span class="cert-issuer"> Security Blue Team</span>
+            <h3>Introduction to Network Analysis</h3>
+            <p>Core Python scripting and automation fundamentals</p>
+            <span class="cert-year">2023</span>
+          </div>
+          <!-- <div class="cert-badge">AWS SKillbuilder</div> -->
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-shield-halved"></i></div>
+          <div class="cert-body">
+            <!-- <span class="cert-issuer">CompTIA</span> -->
+            <h3>AWS Cloud Quest: Cloud Practitioner</h3>
+            <p>Cloud computing fundamentals and AWS service knowledge</p>
+            <span class="cert-year">2025</span>
+          </div>
+           <!-- <div class="cert-badge">AWS Skill Builder</div> -->
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fab fa-linux"></i></div>
+          <div class="cert-body">
+            <span class="cert-issuer">NERN</span>
+            <h3>Campus Network Design </h3>
+            <p> Hands-on LAN/WAN design, network infrastructure planning, and campus-level connectivity deployment</p>
+            <span class="cert-year">2024</span>
+          </div>
+          <!-- <div class="cert-badge">LPI</div> -->
+        </div>
+         <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fab fa-python"></i></div>
+          <div class="cert-body">
+            <span class="cert-issuer"> NRCC</span>
+            <h3>NASA Space App Challange-Hackathon</h3>
+            <p>Participated in the NASA Space App Challenge Hackathon.</p>
+            <span class="cert-year">2023</span>
+          </div>
+          <!-- <div class="cert-badge">AWS SKillbuilder</div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ SERVICES ░░ -->
+  <section id="services" class="section services-section">
+    <div class="container">
+      <div class="section-header">
+        <!-- <span class="section-tag">05 // SERVICES</span> -->
+        <h2 class="section-title">What I <span class="accent">Offer</span></h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Secure, modern web applications with clean architecture, built using Python/Django and modern frontend technologies.</p>
+          <ul class="service-list">
+            <li>Full-stack development</li>
+          
+            <li>Secure auth systems</li>
+          </ul>
+        </div>
+        <!-- <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3>Cyber Security Consulting</h3>
+          <p>Expert guidance on security posture assessment, threat modeling, and implementing defense-in-depth strategies.</p>
+          <ul class="service-list">
+            <li>Security architecture review</li>
+            <li>Risk assessment</li>
+            <li>Security policy drafting</li>
+          </ul>
+        </div> -->
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+          <h3>Vulnerability Assessment</h3>
+          <p>Systematic scanning and identification of security weaknesses before attackers find them, with detailed remediation plans.</p>
+          <ul class="service-list">
+            <li>Automated scanning</li>
+            <li>Manual testing</li>
+            <li>CVSS scoring & reports</li>
+          </ul>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-crosshairs"></i></div>
+          <h3>Penetration Testing</h3>
+          <p>Simulated ethical attacks on your systems to uncover critical vulnerabilities using industry-standard methodologies.</p>
+          <ul class="service-list">
+            <li>Web app pentesting</li>
+            <li>Network pentesting</li>
+            <li>Social engineering tests</li>
+          </ul>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+          <h3>Network Security</h3>
+          <p>Design and audit of secure network architectures with firewall configuration, IDS/IPS setup, and traffic analysis.</p>
+          <ul class="service-list">
+            <li>Network auditing</li>
+            <li>Firewall configuration</li>
+            <li>VPN & encryption</li>
+          </ul>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-flask"></i></div>
+          <h3>Security Research</h3>
+          <p>In-depth research into emerging threats, zero-day vulnerabilities, and new attack vectors with responsible disclosure.</p>
+          <ul class="service-list">
+            <li>CVE research</li>
+            <li>Malware analysis</li>
+            <li>Bug bounty hunting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- ░░ ACADEMIC JOURNEY ░░ -->
+<section id="education" class="section exp-section">
+  <div class="container">
+    <div class="section-header">
+      <!-- <span class="section-tag">06 // EDUCATION</span> -->
+      <h2 class="section-title">Academic <span class="accent">Journey</span></h2>
+    </div>
+
+    <div class="timeline">
+
+      <!-- BEIT -->
+      <div class="timeline-item reveal">
+        <div class="tl-dot">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+
+        <div class="tl-card">
+          <span class="tl-date">2021 — 2026</span>
+
+          <h3>B.E. Information Technology</h3>
+           <h4> Full Scholarship - Pokhara University</h4>
+          <h4>Cosmos College of Management and Technology — Pokhara University</h4>
+
+          <p>
+            Currently pursuing a Bachelor’s degree in Information Technology with strong focus on
+            cybersecurity, networking, software engineering, and system development.
+            Current CGPA: <strong>3.91 / 4.0</strong> (Full Merit Scholar)
+          </p>
+
+          <div class="tl-tags">
+            <span>Computer Networks</span>
+            <span>Network Programming</span>
+            <span>DBMS</span>
+            <span>Software Engineering</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- +2 -->
+      <div class="timeline-item reveal">
+        <div class="tl-dot">
+          <i class="fas fa-school"></i>
+        </div>
+
+        <div class="tl-card">
+          <span class="tl-date">2019 — 2021</span>
+
+          <h3>NEB +2 Science</h3>
+          <h4>Texas International College — Mitrapark, Chabahil</h4>
+
+          <p>
+            Completed higher secondary education in Science stream with strong academic performance.
+            GPA: <strong>3.36 / 4.0</strong>
+          </p>
+        </div>
+      </div>
+
+      <!-- SEE -->
+      <div class="timeline-item reveal">
+        <div class="tl-dot">
+          <i class="fas fa-book"></i>
+        </div>
+
+        <div class="tl-card">
+          <span class="tl-date">2019</span>
+
+          <h3>Secondary Education Examination (SEE)</h3>
+          <h4>Shree Ma.Vi Rakathum</h4>
+
+          <p>
+            Completed SEE with strong foundation in science, mathematics, and computer studies.
+            GPA: <strong>3.35 / 4.0</strong>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ░░ RESUME ░░ -->
+  <section id="resume" class="section resume-section">
+    <div class="container">
+      <div class="section-header">
+        <!-- <span class="section-tag">07 // RESUME</span> -->
+        <h2 class="section-title">My <span class="accent">Resume</span></h2>
+      </div>
+      <div class="resume-wrapper reveal">
+        <div class="resume-card">
+          <div class="resume-card-header">
+            <div class="resume-avatar">AC</div>
+            <div>
+              <h3>Rosan Shreshtha</h3>
+              <p>Cybersecurity Student & Ethical Hacker</p>
+              <span><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</span>
+            </div>
+          </div>
+          <div class="resume-card-body">
+            <div class="resume-section-mini">
+              <h4><i class="fas fa-graduation-cap"></i> Education</h4>
+              <p><strong>Bachelor of Engineering in Information Technology</strong> — Pokhara University, 2021–2026</p>
+            </div>
+            <div class="resume-section-mini">
+              <h4><i class="fas fa-trophy"></i> Highlights</h4>
+              <p>IT Engineering | Cyber Security | Networking | CGPA: 3.91/4.0</p>
+            </div>
+            <div class="resume-skills-preview">
+              <span>Python</span><span>Ethical Hacking</span><span>Pentesting</span><span>Django</span><span>Linux</span><span>Nmap</span>
+            </div>
+          </div>
+        </div>
+        <div class="resume-actions">
+          <p>Download my full CV to see my complete experience, education, skills, and portfolio in one document.</p>
+          <a href="#" class="btn btn-primary btn-lg" id="downloadCV2">
+            <i class="fas fa-file-pdf"></i> Download PDF Resume
+          </a>
+          <a href="cv.pdf" class="btn btn-outline btn-lg">
+            <i class="fas fa-eye"></i> Preview Online
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ CONTACT ░░ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header">
+        <!-- <span class="section-tag">08 // CONTACT</span> -->
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+        <p class="section-sub">Ready to collaborate? Reach out directly through any of these channels.</p>
+      </div>
+
+      <div class="contact-cards reveal">
+
+        <a href="mailto:rosanshrestha375@gmail.com" class="contact-card">
+          <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+          <div class="cc-body">
+            <span class="cc-label">Send an Email</span>
+            <strong>rosanshrestha375@gmail.com</strong>
+            <p>Best for project inquiries & collaborations</p>
+          </div>
+          <div class="cc-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="https://wa.me/97798XXXXXXXX" target="_blank" class="contact-card">
+          <div class="cc-icon cc-green"><i class="fab fa-whatsapp"></i></div>
+          <div class="cc-body">
+            <span class="cc-label">WhatsApp</span>
+            <strong>+977 9860019652</strong>
+            <p>Quick replies — usually within a few hours</p>
+          </div>
+          <div class="cc-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="https://linkedin.com/in/rosanshrestha" target="_blank" class="contact-card">
+          <div class="cc-icon cc-blue"><i class="fab fa-linkedin-in"></i></div>
+          <div class="cc-body">
+            <span class="cc-label">LinkedIn</span>
+            <strong>linkedin.com/in/rosanshrestha</strong>
+            <p>Professional networking & opportunities</p>
+          </div>
+          <div class="cc-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="https://github.com/rosangithub" target="_blank" class="contact-card">
+          <div class="cc-icon cc-purple"><i class="fab fa-github"></i></div>
+          <div class="cc-body">
+            <span class="cc-label">GitHub</span>
+            <strong>github.com/rosanshrestha</strong>
+            <p>Check my code, projects & contributions</p>
+          </div>
+          <div class="cc-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="https://instagram.com/rosanshrestha89" target="_blank" class="contact-card">
+          <div class="cc-icon cc-sky"><i class="fab fa-instagram"></i></div>
+          <div class="cc-body">
+            <span class="cc-label">Instagram</span>
+            <strong>@rosanshrestha89</strong>
+            <p>Follow for security tips & updates</p>
+          </div>
+          <div class="cc-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+         <a href="https://facebook.com/rosan.shrestha.77920" target="_blank" class="contact-card">
+          <div class="cc-icon cc-sky"><i class="fab fa-facebook-f"></i></div>
+          <div class="cc-body">
+            <span class="cc-label">Facebook</span>
+            <strong>@rosan.shrestha.77920</strong>
+            <p>Connect with me on Facebook</p>
+          </div>
+          <div class="cc-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <div class="contact-card contact-card-location">
+          <div class="cc-icon cc-red"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="cc-body">
+            <span class="cc-label">Location</span>
+            <strong>Kathmandu, Nepal</strong>
+            <p>Available for remote work globally</p>
+          </div>
+          <div class="cc-badge">Remote OK</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav-logo"><span class="logo-bracket">[</span>ROSAN<span class="logo-accent">_SHRESTHA</span><span class="logo-bracket">]</span></span>
+          <p>Securing the digital world, one line of code at a time.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="footer-social-icons">
+            <a href="https://github.com/rosangithub" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/rosanshrestha" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/rosanshrestha89" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/rosan.shrestha.77920/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Rosan Shrestha. All rights reserved. Built with <span class="accent">❤</span> & lots of <span class="accent">coffee</span>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ░░ BACK TO TOP ░░ -->
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
